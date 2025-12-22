@@ -8,8 +8,6 @@ CREATE TABLE users (
     locale VARCHAR(50),
     signin_type VARCHAR(50),
     signin_ip VARCHAR(255),
-    signin_provider VARCHAR(50),
-    signin_openid VARCHAR(255)
 );
 
 CREATE TABLE songs (
