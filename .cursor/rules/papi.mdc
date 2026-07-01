@@ -1,0 +1,37 @@
+---
+description: PAPI — Persistent Adaptive Planning Intelligence
+globs:
+alwaysApply: true
+---
+
+# melodisco — PAPI Workflow
+
+PAPI gives your project structured planning, building, and reviewing. The agent manages the cycle workflow automatically.
+
+## Session Start
+
+Run `orient` at the start of every session to get cycle state, in-progress tasks, and recommended next action.
+
+## The Cycle
+
+`plan` → `build_list` → `build_execute` (start) → implement → `build_execute` (complete) → `review_list` → `review_submit` → `release`
+
+- **plan** — Generate BUILD HANDOFFs for the next cycle. Run once per cycle.
+- **build_execute \<task-id\>** (start) — Create feature branch, return BUILD HANDOFF.
+- **build_execute \<task-id\>** (complete) — Submit build report after implementing.
+- **review_submit** — Accept, request changes, or reject completed builds.
+- **release** — Merge all done tasks when the cycle is complete.
+
+## Quick Commands
+
+- `orient` — Current cycle state and recommended next action
+- `idea` — Add a task or bug to the backlog
+- `board_view` — See all active tasks
+- `health` — Deep project metrics
+
+## Rules
+
+- Run tools automatically — don't ask the user to invoke MCP tools manually
+- Stay within BUILD HANDOFF scope — don't add unrequested features
+- Commit per task — traceable git history
+- After build_execute completes: run `review_submit` with the verdict before presenting for human review
