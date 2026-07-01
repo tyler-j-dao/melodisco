@@ -7,7 +7,7 @@ CREATE TABLE users (
     avatar_url VARCHAR(255),
     locale VARCHAR(50),
     signin_type VARCHAR(50),
-    signin_ip VARCHAR(255),
+    signin_ip VARCHAR(255)
 );
 
 CREATE TABLE songs (
@@ -58,7 +58,7 @@ CREATE TABLE upvote_songs (
     updated_at timestamptz,
     is_signin BOOLEAN,
     status VARCHAR(50)
-)
+);
 
 CREATE TABLE song_tasks (
     uuid VARCHAR(255) UNIQUE NOT NULL,

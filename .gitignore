@@ -28,6 +28,9 @@ yarn-error.log*
 # local env files
 .env*
 Makefile
+
+# mcp config (contains API keys)
+.mcp.json
 data/data.sql
 data/songs.json
 
